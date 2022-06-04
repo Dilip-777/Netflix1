@@ -2,7 +2,7 @@ import { useState, useContext , useEffect } from "react";
 import { FirebaseContext } from "../contexts/firebase";
 
 export default function useContent (target) {
-    const [content ,setContent] = useState()
+    const [content ,setContent] = useState([])
     const { firebase } = useContext(FirebaseContext)
 
     useEffect(() => {
@@ -23,5 +23,5 @@ export default function useContent (target) {
           })
     } , [])
 
-    return { [target]: content }
+    return  {[target]: content }
 }
