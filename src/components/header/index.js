@@ -9,6 +9,7 @@ import {
   Group,
   Profile,
   Dropdown,
+  PlayButton,
   Picture,
   Search,
   SearchIcon,
@@ -49,7 +50,7 @@ Header.Search = function HeaderSearch ({ searchTerm, setSearchTerm, ...restProps
     const [searchActive, setSearchActive ]  = useState(false);
     return (
         <Search {...restProps} >
-            <SearchIcon onClick={()=> setSearchActive(searchActive => !searchActive)} >
+            <SearchIcon onClick={()=> setSearchActive((searchActive) => !searchActive)} >
                 <img src="/images/icons/search.png" alt="Search" />
             </SearchIcon>
             <SearchInput 
@@ -73,6 +74,10 @@ Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 };
+
+Header.PlayButton = function HeaderPlayButton ({children , ...restProps}) {
+  return <PlayButton {...restProps} >{children}</PlayButton>
+}
 
 Header.Group = function HeaderGroup({ children, ...restProps }) {
   return <Group {...restProps}>{children}</Group>;

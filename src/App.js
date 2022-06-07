@@ -21,7 +21,7 @@ export default function App () {
             <IsUserRedirect 
             user={user}
             loggedInPath = {ROUTES.BROWSE}
-            path={ROUTES.SIGN_IN}
+            path={ROUTES.SIGN_UP}
             exact
             >
                <SignUp />
